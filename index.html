@@ -1,0 +1,2659 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Audi Ikhsan - My Portfolio</title>
+    <meta name="description" content="Audi Ikhsan - My Portfolio" />
+    <link rel="icon" type="image/png" href="img/myicon.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4f46e5",
+              accent: "#06b6d4",
+              darkbg: "#0f172a",
+              darksurface: "#1e293b",
+              darkcard: "#334155",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-6px)" },
+              },
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .diagonal {
+        clip-path: none;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gradient-to-b from-slate-50 to-white text-slate-800 antialiased dark:from-darkbg dark:to-darksurface dark:text-slate-100"
+  >
+    <!-- NAV -->
+    <header
+      class="fixed w-full z-30 top-0 backdrop-blur-md bg-white/60 border-b border-slate-200 dark:bg-darksurface/60 dark:border-slate-700"
+    >
+      <div
+        class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="h-10 w-10 rounded-full overflow-hidden">
+            <img
+              src="img/audiikhsan-bw.jpeg"
+              alt="pasfoto"
+              class="h-full w-full object-cover scale-150"
+            />
+          </div>
+
+          <div class="block">
+            <div class="text-sm font-bold">Audi Ikhsan</div>
+            <div
+              class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+            >
+              Web Developer • Design Enthusiast
+            </div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex gap-6 items-center text-sm">
+          <a
+            href="#about"
+            class="transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+          >
+            About
+          </a>
+
+          <a
+            href="#skill"
+            class="transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+          >
+            Skills
+          </a>
+
+          <a
+            href="#certification"
+            class="transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+          >
+            Certification
+          </a>
+
+          <a
+            href="#experience"
+            class="transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+          >
+            Experience
+          </a>
+
+          <a
+            href="#projects"
+            class="transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+          >
+            Projects
+          </a>
+
+          <a
+            href="#contact"
+            class="transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+          >
+            Contact
+          </a>
+          <button
+            id="themeBtn"
+            class="ml-2 px-3 py-1 rounded-md border text-sm border-slate-300 dark:border-slate-600 bg-white text-slate-800 dark:bg-darkcard dark:text-slate-100 transition-all duration-300 ease-out transform hover:scale-110 hover:bg-darksurface hover:text-white dark:hover:bg-slate-100 dark:hover:text-black"
+          >
+            Light Mode
+          </button>
+        </nav>
+
+        <!-- BUTTON MOBILE -->
+        <button
+          id="menuBtn"
+          class="md:hidden w-10 h-10 flex items-center justify-center rounded-md border border-slate-300 dark:border-slate-600 text-xl leading-none transition-all duration-200 hover:bg-slate-100 dark:hover:bg-darkcard"
+        >
+          ☰
+        </button>
+      </div>
+      <!-- NAV MOBILE -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden bg-white dark:bg-darksurface border-t border-slate-200 dark:border-slate-700"
+      >
+        <nav class="flex flex-col gap-4 px-6 py-6 text-sm">
+          <a
+            href="#about"
+            class="mobile-link py-2 border-b border-slate-200 dark:border-slate-700 transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+            >About</a
+          >
+          <a
+            href="#skill"
+            class="mobile-link py-2 border-b border-slate-200 dark:border-slate-700 transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+            >Skills</a
+          >
+          <a
+            href="#certification"
+            class="mobile-link py-2 border-b border-slate-200 dark:border-slate-700 transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+            >Certification</a
+          >
+          <a
+            href="#experience"
+            class="mobile-link py-2 border-b border-slate-200 dark:border-slate-700 transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+            >Experience</a
+          >
+          <a
+            href="#projects"
+            class="mobile-link py-2 border-b border-slate-200 dark:border-slate-700 transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="mobile-link py-2 border-b border-slate-200 dark:border-slate-700 transition-all duration-300 transform hover:-translate-y-1 hover:font-bold"
+            >Contact</a
+          >
+
+          <button
+            id="themeBtnMobile"
+            class="ml-2 px-3 py-1 rounded-md border text-sm border-slate-300 dark:border-slate-600 bg-white text-slate-800 dark:bg-darkcard dark:text-slate-100 transition-all duration-300 ease-out transform hover:scale-110 hover:bg-darksurface hover:text-white dark:hover:bg-slate-100 dark:hover:text-black"
+          >
+            Light Mode
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-20">
+      <!-- HERO -->
+      <section
+        id="home"
+        class="diagonal bg-gradient-to-r from-white to-slate-50 dark:from-darksurface dark:to-darkbg"
+      >
+        <div
+          class="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        >
+          <div data-aos="fade-right">
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              Hi, <span class="font-semibold">Nama Saya</span>
+            </p>
+            <h1
+              class="mt-3 text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 dark:text-white"
+            >
+              Audi Ikhsan Tanjung.
+            </h1>
+            <p
+              class="mt-4 text-slate-600 dark:text-slate-300 max-w-xl font-bold"
+            >
+              Web Developer | Design Enthusiast | Computer Engineering
+            </p>
+            <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-xl">
+              Saya seorang Web Developer & Design Enthusiast yang fokus pada
+              pembuatan tampilan website yang modern, responsif, dan
+              user-friendly. Dengan latar belakang Computer Engineering, saya
+              memiliki dasar kuat dalam pemrograman, sistem hardware, dan
+              teknologi digital siap menghadirkan solusi kreatif dan fungsional
+              untuk setiap proyek.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#projects"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white dark:bg-white dark:text-black rounded-lg shadow-[0_10px_25px_-8px_rgba(0,0,0,0.45)] dark:shadow-[0_10px_25px_-8px_rgba(0,0,0,0.25)] transition-transform duration-300 ease-out transform hover:scale-105 hover:bg-black dark:hover:bg-slate-200"
+              >
+                Lihat Project
+              </a>
+
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-2 px-4 py-2 border rounded-lg text-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-600 shadow-[0_8px_20px_-6px_rgba(0,0,0,0.25)] dark:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.4)] transition-transform duration-300 ease-out transform hover:-translate-y-1 hover:scale-105 hover:bg-slate-100 dark:hover:bg-darkcard"
+              >
+                Hubungi saya
+              </a>
+            </div>
+
+            <div class="mt-8 flex items-center gap-4 text-sm text-slate-500">
+              <div class="flex items-center gap-2">
+                <div
+                  class="h-2 w-2 rounded-full bg-green-400 animate-pulse"
+                ></div>
+                <span>Available for freelance</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300"
+                  >📍 Location: Indonesia</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto Profil -->
+          <div class="relative" data-aos="fade-left" data-aos-delay="200">
+            <div
+              class="absolute -right-8 -top-8 w-40 h-40 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 blur-2xl animate-float"
+            ></div>
+            <div
+              class="transform rotate-5 shadow-2xl rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-darkcard"
+            >
+              <div
+                class="p-4 bg-gradient-to-r from-primary to-accent text-white flex items-center justify-between"
+              >
+                <div>
+                  <div class="text-xs opacity-90">(+62) 821 8131 4702</div>
+                  <div class="text-sm font-semibold">
+                    audiikhsan10@gmail.com
+                  </div>
+                </div>
+                <div class="text-xs opacity-90">2025</div>
+              </div>
+              <div class="p-6">
+                <img
+                  src="img/audiikhsan.png"
+                  alt="mock"
+                  class="w-full h-40 md:h-56 lg:h-64 object-cover rounded-md"
+                />
+
+                <div class="mt-4 flex items-center justify-between gap-3">
+                  <!-- CV -->
+                  <a
+                    href="pdf/cv-audiikhsan.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-slate-900/5 dark:bg-white/5 hover:bg-slate-900/10 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md px-4 py-2 rounded-lg text-sm text-slate-700 dark:text-slate-200"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M3 7v4a1 1 0 001 1h3m10 0h3a1 1 0 001-1V7M7 21h10"
+                      />
+                    </svg>
+                    Lihat CV
+                  </a>
+
+                  <!-- English Version -->
+                  <a
+                    href="home-eng.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-blue-900 hover:bg-black dark:bg-white dark:hover:bg-black text-white dark:text-slate-900 dark:hover:text-white transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md px-4 py-2 rounded-lg text-sm flex-shrink-0"
+                  >
+                    <span
+                      class="w-6 aspect-[2/1] rounded-sm overflow-hidden flex-shrink-0 inline-flex items-center justify-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 320"
+                        class="w-full h-full"
+                        aria-label="United Kingdom Flag"
+                      >
+                        <rect width="640" height="320" fill="#012169" />
+                        <polygon
+                          fill="#FFF"
+                          points="0,0 80,0 640,240 640,320 560,320 0,80"
+                        />
+                        <polygon
+                          fill="#FFF"
+                          points="640,0 560,0 0,240 0,320 80,320 640,80"
+                        />
+                        <polygon
+                          fill="#C8102E"
+                          points="0,0 50,0 640,260 640,320 590,320 0,60"
+                        />
+                        <polygon
+                          fill="#C8102E"
+                          points="640,0 590,0 0,260 0,320 50,320 640,60"
+                        />
+                        <rect x="275" width="90" height="320" fill="#FFF" />
+                        <rect y="115" width="640" height="90" fill="#FFF" />
+                        <rect x="295" width="50" height="320" fill="#C8102E" />
+                        <rect y="135" width="640" height="50" fill="#C8102E" />
+                      </svg>
+                    </span>
+                    English Version
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="max-w-6xl mx-auto px-6 py-14">
+        <h2 class="text-2xl font-bold mb-6" data-aos="fade-up">About Me</h2>
+
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-2">
+            <p
+              class="text-slate-600 dark:text-slate-300 text-justify leading-relaxed"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              Saya lulusan D3 Teknik Komputer di Politeknik Negeri Medan pada
+              tahun 2024. Saya memiliki kemampuan dalam bidang pemrograman
+              seperti Pengembangan Aplikasi dan Website, Pemrograman Hardware,
+              Jaringan Komputer, Internet of Things, serta Desain Grafis. Saya
+              juga aktif dalam berbagai kegiatan organisasi yang memperluas
+              keterampilan kerja tim dan komunikasi saya. Saya memiliki minat
+              karir dalam bidang pemrograman, digitalisasi, serta bidang terkait
+              teknologi informasi lainnya.
+            </p>
+
+            <!-- Pendidikan -->
+            <div class="mt-6">
+              <div
+                class="relative overflow-visible rounded-xl border dark:border-slate-700 bg-white dark:bg-darkcard p-5"
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-duration="900"
+              >
+                <div
+                  class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xl"
+                ></div>
+                <div
+                  class="absolute -top-6 right-6 z-10 w-14 h-14 rounded-full bg-white flex items-center justify-center text-4xl shadow-md border border-slate-200 dark:border-slate-700"
+                >
+                  🎓
+                </div>
+
+                <div class="pl-4">
+                  <div class="text-sm font-semibold mb-3">Education</div>
+                  <div class="flex items-start justify-between gap-4">
+                    <h4 class="font-semibold text-base leading-snug">
+                      D3 Teknik Komputer – Teknik Komputer dan Informatika
+                    </h4>
+
+                    <span
+                      class="text-xs font-medium px-3 py-1 rounded-full whitespace-nowrap bg-green-500/10 text-green-600 dark:bg-green-500 dark:text-black"
+                    >
+                      IPK 3.45 / 4.00
+                    </span>
+                  </div>
+                  <div class="flex items-start justify-between gap-4 mt-2">
+                    <h5
+                      class="text-sm font-medium text-slate-600 dark:text-slate-300"
+                    >
+                      POLITEKNIK NEGERI MEDAN
+                    </h5>
+
+                    <span
+                      class="text-xs font-medium px-3 py-1 rounded-full whitespace-nowrap bg-primary/10 text-primary dark:bg-blue-600 dark:text-white"
+                    >
+                      2021 – 2024
+                    </span>
+                  </div>
+                  <p
+                    class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+                  >
+                    Fokus pada pengembangan web, dasar pemrograman, dan
+                    implementasi antarmuka pengguna melalui proyek praktikum dan
+                    tugas akhir. Aktif terlibat dalam pengembangan software dan
+                    hardware melalui berbagai proyek akademik dan non-akademik.
+                  </p>
+                  <p
+                    class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+                  >
+                    Studi Relevan :
+                    <span class="font-semibold"
+                      >Komputer, Pemrograman Web, Internet of Things, Arduino,
+                      Desain Grafis</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pendidikan -->
+            <div class="mt-6">
+              <div
+                class="relative overflow-visible rounded-xl border dark:border-slate-700 bg-white dark:bg-darkcard p-5"
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-duration="900"
+              >
+                <div
+                  class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xl"
+                ></div>
+
+                <div class="pl-4">
+                  <div class="text-sm font-semibold mb-3">Education</div>
+
+                  <div class="flex items-start justify-between gap-4">
+                    <h4 class="font-semibold text-base leading-snug">
+                      IPA / Science - Ilmu Pengetahuan Alam
+                    </h4>
+
+                    <span
+                      class="text-xs font-medium px-3 py-1 rounded-full whitespace-nowrap bg-green-500/10 text-green-600 dark:bg-green-500 dark:text-black"
+                    >
+                      NIM. 93 / 100
+                    </span>
+                  </div>
+                  <div class="flex items-start justify-between gap-4 mt-2">
+                    <h5
+                      class="text-sm font-medium text-slate-600 dark:text-slate-300"
+                    >
+                      SMA SWASTA AL-ULUM MEDAN
+                    </h5>
+
+                    <span
+                      class="text-xs font-medium px-3 py-1 rounded-full whitespace-nowrap bg-primary/10 text-primary dark:bg-blue-600 dark:text-white"
+                    >
+                      2018 – 2021
+                    </span>
+                  </div>
+                  <p
+                    class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+                  >
+                    Memperoleh pemahaman mendalam dalam mata pelajaran sains dan
+                    matematika, termasuk fisika, kimia, biologi, dan matematika
+                    lanjutan. Aktif dalam kegiatan laboratorium, eksperimen, dan
+                    proyek ilmiah yang mengasah kemampuan analisis dan problem
+                    solving.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <aside
+            id="skill"
+            class="relative p-6 rounded-2xl border bg-white dark:bg-darksurface dark:border-slate-700"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="900"
+          >
+            <div
+              class="absolute -top-6 right-6 z-10 w-14 h-14 rounded-full bg-white flex items-center justify-center text-3xl shadow-md border border-slate-200 dark:border-slate-700"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              data-aos-duration="900"
+            >
+              💡
+            </div>
+            <h3
+              class="text-lg font-semibold mb-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="900"
+            >
+              Skills
+            </h3>
+
+            <ul class="space-y-6">
+              <!-- Web Programming -->
+              <div
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="900"
+              >
+                <li
+                  class="group rounded-xl border border-slate-200 dark:border-slate-700 p-4 transition-all hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div class="flex items-start gap-4">
+                    <div>
+                      <div
+                        class="text-base font-semibold text-slate-800 dark:text-white mb-2"
+                      >
+                        Web Programming
+                      </div>
+
+                      <div class="flex flex-wrap gap-2">
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          PHP
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          JavaScript
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          HTML
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          CSS
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Visual Studio Code
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Python
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          SQL
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+
+              <!-- Design -->
+              <div
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-duration="900"
+              >
+                <li
+                  class="group rounded-xl border border-slate-200 dark:border-slate-700 p-4 transition-all hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div class="flex items-start gap-4">
+                    <div>
+                      <div
+                        class="text-base font-semibold text-slate-800 dark:text-white mb-2"
+                      >
+                        UI/UX - Graphic Design
+                      </div>
+
+                      <div class="flex flex-wrap gap-2">
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Figma
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Canva
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Adobe Photoshop
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Adobe Ilustrator
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          CorelDraw
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+
+              <!-- Automation & IoT -->
+              <div
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="900"
+              >
+                <li
+                  class="group rounded-xl border border-slate-200 dark:border-slate-700 p-4 transition-all hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div class="flex items-start gap-4">
+                    <div>
+                      <div
+                        class="text-base font-semibold text-slate-800 dark:text-white mb-2"
+                      >
+                        Automation & Internet of Things
+                      </div>
+
+                      <div class="flex flex-wrap gap-2">
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          C++
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          C#
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Java
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          TinkerCad
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Arduino IDE & ESP
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Blynk
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Fritzing
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+
+              <!-- Microsoft -->
+              <div
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="900"
+              >
+                <li
+                  class="group rounded-xl border border-slate-200 dark:border-slate-700 p-4 transition-all hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div class="flex items-start gap-4">
+                    <div>
+                      <div
+                        class="text-base font-semibold text-slate-800 dark:text-white mb-2"
+                      >
+                        Microsoft Office
+                      </div>
+
+                      <div class="flex flex-wrap gap-2">
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Word
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Excel
+                        </span>
+                        <span
+                          class="px-3 py-1 text-xs rounded-full bg-gray-200 text-black dark:bg-gray-500 dark:text-white"
+                        >
+                          Powerpoint
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- CERTIFICATION -->
+      <section id="certification" class="bg-slate-50 dark:bg-darksurface py-14">
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="text-2xl font-bold mb-6" data-aos="fade-right">
+            Certification
+          </h2>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Sertifikat 1 -->
+            <div
+              data-aos="fade-right"
+              data-aos-delay="600"
+              data-aos-duration="900"
+            >
+              <div
+                class="group p-5 rounded-2xl bg-white dark:bg-darkcard border dark:border-slate-700 shadow sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 transition cursor-pointer"
+                onclick="
+                  openCertModal(
+                    'Junior Programmer',
+                    'Operation System, Programming, UI UX, Database SQL, Mobile Programming ',
+                    'Badan Nasional Sertifikasi Profesi (BNSP)',
+                    '2024',
+                    'pdf/cert-ai_bnsp.pdf',
+                  )
+                "
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-10 w-10 rounded-lg bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition"
+                  >
+                    <img
+                      src="img/bnsp.png"
+                      alt="logo-bnsp"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="font-semibold">Junior Programmer</h3>
+                    <p
+                      class="text-xs font-semibold text-slate-500 dark:text-slate-300"
+                    >
+                      Badan Nasional Sertifikasi Profesi (BNSP)
+                    </p>
+                  </div>
+                </div>
+
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">
+                  Sertifikasi kompetensi pemrograman, logika algoritma, dan
+                  penerapan kode yang terstruktur. Operation System, Database
+                  SQL, Programming
+                </p>
+
+                <div
+                  class="mt-4 flex items-center justify-between text-xs text-slate-500"
+                >
+                  <span class="font-semibold dark:text-white">2024</span>
+                  <span class="text-primary dark:text-accent font-bold">
+                    Lihat Sertifikat →
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sertifikat 2 -->
+            <div
+              data-aos="fade-right"
+              data-aos-delay="400"
+              data-aos-duration="900"
+            >
+              <div
+                class="group p-5 rounded-2xl bg-white dark:bg-darkcard border dark:border-slate-700 shadow sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 transition cursor-pointer"
+                onclick="
+                  openCertModal(
+                    'Pembuatan Website',
+                    'Pemanduan Pariwisata, Pemrograman Website, Pembuatan Website melalui Wordpress, dan Design Thinking ',
+                    'Balai Besar Pelatihan Vokasi & Produktivitas Medan (BBPVP Medan)',
+                    '2025',
+                    'pdf/cert-ai_bbpvp.pdf',
+                  )
+                "
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-10 w-10 rounded-lg bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition"
+                  >
+                    <img
+                      src="img/logo-kemnaker.png"
+                      alt="logo-kemnaker"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="font-semibold">Pembuatan Website</h3>
+                    <p
+                      class="text-xs font-semibold text-slate-500 dark:text-slate-300"
+                    >
+                      BBPVP Medan
+                    </p>
+                  </div>
+                </div>
+
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">
+                  Sertifikat Pelatihan Kerja (Project Based Learning) dalam
+                  proyek Smart-Tourism : Pembuatan Sistem Informasi Pariwisata
+                  Berbasis Website
+                </p>
+
+                <div
+                  class="mt-4 flex items-center justify-between text-xs text-slate-500"
+                >
+                  <span class="font-semibold dark:text-white">2025</span>
+                  <span class="text-primary dark:text-accent font-bold">
+                    Lihat Sertifikat →
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sertifikat 3 -->
+            <div
+              data-aos="fade-right"
+              data-aos-delay="200"
+              data-aos-duration="900"
+            >
+              <div
+                class="group p-5 rounded-2xl bg-white dark:bg-darkcard border dark:border-slate-700 shadow sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 transition cursor-pointer"
+                onclick="
+                  openCertModal(
+                    'Front End Web Development',
+                    'Web Programming, Front-End Web Development, CSS, dan Javascript ',
+                    'Dicoding',
+                    '2023',
+                    'pdf/cert-dicoding_frontend.pdf',
+                  )
+                "
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-10 w-10 rounded-lg bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition"
+                  >
+                    <img
+                      src="img/logo-dicoding.png"
+                      alt="logo-dicoding"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="font-semibold">Front End Web Development</h3>
+                    <p
+                      class="text-xs font-semibold text-slate-500 dark:text-slate-300"
+                    >
+                      Dicoding
+                    </p>
+                  </div>
+                </div>
+
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">
+                  Sertifikat kelulusan Dicoding Front-End Web Development dalam
+                  pengembangan web responsif berbasis HTML, CSS, dan JavaScript.
+                </p>
+
+                <div
+                  class="mt-4 flex items-center justify-between text-xs text-slate-500"
+                >
+                  <span class="font-semibold dark:text-white">2023</span>
+                  <span class="text-primary dark:text-accent font-bold">
+                    Lihat Sertifikat →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mt-8 text-right"
+            data-aos="zoom-out"
+            data-aos-delay="200"
+            data-aos-duration="900"
+          >
+            <a
+              href="certification.html"
+              class="inline-block px-4 py-2 text-sm bg-white text-primary font-medium rounded-lg border border-slate-300 shadow transition-all duration-300 ease-out hover:bg-slate-100 hover:-translate-y-1 hover:shadow-lg"
+            >
+              Lihat Semua Sertifikat
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODAL SERTIFIKAT -->
+      <div
+        id="certModal"
+        class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50"
+        onclick="closeCertModal()"
+      >
+        <div
+          class="bg-white dark:bg-darkcard max-w-3xl w-full mx-4 rounded-2xl p-6 relative animate-fade"
+          onclick="event.stopPropagation()"
+        >
+          <button
+            onclick="closeCertModal()"
+            class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/50 text-white hover:bg-red-500 transition flex items-center justify-center"
+          >
+            ✕
+          </button>
+
+          <h3 id="certTitle" class="text-xl font-bold mb-1"></h3>
+          <p
+            id="certDesc"
+            class="text-sm text-slate-600 dark:text-white mb-2"
+          ></p>
+          <div class="text-xs text-slate-500 dark:text-white font-bold mb-3">
+            <span id="certOrg"></span> • <span id="certYear"></span>
+          </div>
+
+          <iframe
+            id="certPdf"
+            src=""
+            class="w-full h-[70vh] rounded-lg border dark:border-slate-700"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- ACHIEVEMENT -->
+      <section id="achievement" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-bold" data-aos="fade-left">
+            Achievement & Activity
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Achievement 1 -->
+          <div
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="900"
+          >
+            <div
+              class="group relative p-6 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <span
+                class="absolute left-0 top-6 h-12 w-1 rounded-r-full bg-primary"
+              ></span>
+
+              <div
+                class="h-10 w-10 rounded-lg bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition"
+              >
+                <img
+                  src="img/logo-pertamina.png"
+                  alt="Juara 1"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <h3 class="font-semibold text-lg">
+                Finalis Proyek Sosial Terbaik
+              </h3>
+
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                Finalis Proyek Sosial Terbaik Program PFmuda Kategori Inisiasi
+              </p>
+
+              <div
+                class="mt-4 text-xs text-slate-500 dark:text-white font-medium"
+              >
+                PERTAMINA FOUNDATION • 2023
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement 2 -->
+          <div
+            data-aos="fade-left"
+            data-aos-delay="400"
+            data-aos-duration="900"
+          >
+            <div
+              class="group relative p-6 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <span
+                class="absolute left-0 top-6 h-12 w-1 rounded-r-full bg-primary"
+              ></span>
+
+              <div
+                class="h-10 w-10 rounded-lg bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition"
+              >
+                <img
+                  src="img/logo-polmed.png"
+                  alt="Juara 1"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <h3 class="font-semibold text-lg">Lolos Program Wirausaha</h3>
+
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                Lulus Program Mahasiswa Wirausaha Polmed dengan pengembangan ide
+                bisnis yang inovatif
+              </p>
+
+              <div
+                class="mt-4 text-xs text-slate-500 dark:text-white font-medium"
+              >
+                POLITEKNIK NEGERI MEDAN • 2023
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement 3 -->
+          <div
+            data-aos="fade-left"
+            data-aos-delay="600"
+            data-aos-duration="900"
+          >
+            <div
+              class="group relative p-6 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <span
+                class="absolute left-0 top-6 h-12 w-1 rounded-r-full bg-primary"
+              ></span>
+
+              <div
+                class="h-10 w-10 rounded-lg bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition"
+              >
+                <img
+                  src="img/logo-tni.png"
+                  alt="Juara 1"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <h3 class="font-semibold text-lg">Bintalfisdis</h3>
+
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                Pendidikan dan Latihan Pembinaan Mental, Fisik, dan Disiplin
+                (Bintalfisdis)
+              </p>
+
+              <div
+                class="mt-4 text-xs text-slate-500 dark:text-white font-medium"
+              >
+                RINDAM I/BB • 2022
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="bg-slate-50 dark:bg-darksurface py-14">
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="text-2xl font-bold mb-8" data-aos="fade-up">Experience</h2>
+
+          <div
+            class="relative border-l border-slate-200 dark:border-slate-700 ml-4 space-y-10"
+          >
+            <!-- Experience 1 -->
+            <div
+              class="relative pl-8"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="900"
+            >
+              <span
+                class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-primary"
+              ></span>
+
+              <div
+                class="bg-white dark:bg-darkcard border dark:border-slate-700 rounded-xl p-5 shadow hover:shadow-lg transition"
+              >
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <h3 class="font-semibold text-lg">IT Helpdesk - Intern</h3>
+                  <span
+                    class="text-xs font-bold px-3 py-1 rounded-full bg-primary/10 text-primary dark:bg-blue-600 dark:text-white"
+                  >
+                    Internship
+                  </span>
+                </div>
+
+                <p
+                  class="mt-1 text-sm font-bold text-slate-500 dark:text-slate-300"
+                >
+                  PT Perusahaan Listrik Negara (PLN - Persero)
+                </p>
+
+                <ul
+                  class="mt-3 text-sm text-slate-600 dark:text-slate-400 list-disc list-outside pl-5 space-y-1 leading-relaxed"
+                >
+                  <li>
+                    Merancang pemrograman sistem kontrol suhu dan kelembaban
+                    pada peralatan panel listrik secara otomatis untuk menjaga
+                    suhu dan kelembaban pada kisaran yang aman. Hal ini
+                    berfungsi untuk mencegah kerusakan peralatan seperti
+                    overheat dan kondensasi.
+                  </li>
+                  <li>
+                    Mengelola dan merekap data pengeluaran operasional, termasuk
+                    konsumsi BBM dan penggunaan E-Toll oleh karyawan untuk
+                    keperluan operasional lapangan
+                  </li>
+                  <li>
+                    Melakukan sosialisasi dan mempresentasikan terkait proses
+                    penyaluran listrik, mulai dari pembangkit listrik hingga
+                    distribusi ke rumah-rumah. Hal ini berfungsi untuk program
+                    edukasi teknis untuk meningkatkan pemahaman dasar
+                    kelistrikan
+                  </li>
+                </ul>
+
+                <div
+                  class="mt-4 text-xs text-slate-500 font-semibold dark:text-white"
+                >
+                  2024
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div
+              class="relative pl-8"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="900"
+            >
+              <span
+                class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-accent"
+              ></span>
+
+              <div
+                class="bg-white dark:bg-darkcard border dark:border-slate-700 rounded-xl p-5 shadow hover:shadow-lg transition"
+              >
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <h3 class="font-semibold text-lg">
+                    Pelatihan Kerja Pembuatan Sistem Informasi Pariwisata
+                    Berbasis Website
+                  </h3>
+                  <span
+                    class="text-xs font-bold px-3 py-1 rounded-full bg-accent/10 text-accent dark:bg-green-600 dark:text-white"
+                  >
+                    Training & Course
+                  </span>
+                </div>
+
+                <p
+                  class="mt-1 text-sm font-bold text-slate-500 dark:text-slate-300"
+                >
+                  Balai Latihan Kerja BBPVP Medan – Kementerian Ketenagakerjaan
+                  RI
+                </p>
+
+                <ul
+                  class="mt-3 text-sm text-slate-600 dark:text-slate-400 list-disc list-outside pl-5 space-y-1 leading-relaxed"
+                >
+                  <li>
+                    Mengikuti program pelatihan kerja intensif yang berfokus
+                    pada pengembangan Sistem Informasi Pariwisata berbasis
+                    website dengan menerapkan standar industri. Terlibat dalam
+                    proses perancangan, pengembangan, serta pengujian fitur
+                    website yang informatif dan responsif
+                  </li>
+                  <li>
+                    Membuat website serta mengembangkan fitur utama seperti
+                    halaman destinasi wisata, profil daerah, galeri foto, dan
+                    informasi layanan. Merancang struktur halaman, alur
+                    navigasi, serta penyajian konten destinasi wisata agar
+                    informatif dan mudah diakses pengguna
+                  </li>
+                  <li>
+                    Melakukan debugging, pengujian fungsional, dan optimalisasi
+                    performa website sebagai bagian dari proyek akhir pelatihan.
+                  </li>
+                </ul>
+
+                <div
+                  class="mt-4 text-xs text-slate-500 font-semibold dark:text-white"
+                >
+                  2025
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORGANIZATION -->
+      <section id="organization" class="max-w-6xl mx-auto px-6 py-14">
+        <h2 class="text-2xl font-bold mb-8" data-aos="fade-right">
+          Organization
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Organization 1 -->
+          <div
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-duration="900"
+          >
+            <div
+              class="relative bg-white dark:bg-darkcard border dark:border-slate-700 rounded-2xl p-6 pt-10 shadow sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 transition cursor-pointer"
+            >
+              <img
+                src="img/hmpsce.jpg"
+                alt="Logo HMTK"
+                class="absolute -top-6 left-6 w-12 h-12 rounded-full object-cover border bg-white"
+              />
+
+              <h3 class="font-semibold text-lg">
+                Himpunan Mahasiswa Teknik Komputer Polmed
+              </h3>
+
+              <div
+                class="mt-1 text-sm font-bold text-slate-500 dark:text-slate-300"
+              >
+                Ketua Divisi Agama Islam
+              </div>
+
+              <ul
+                class="mt-3 text-sm text-slate-600 dark:text-slate-400 list-disc list-outside pl-5 space-y-1 leading-relaxed"
+              >
+                <li>
+                  Mengelola perencanaan dan evaluasi kegiatan keagamaan serta
+                  akun media sosial divisi
+                </li>
+                <li>
+                  Berperan dalam pengembangan soft skill dan hard skill
+                  mahasiswa melalui seminar teknologi, pelatihan, workshop IoT,
+                  dan kunjungan industri
+                </li>
+                <li>
+                  Turut menyusun program kerja tahunan dan mengoordinasikan
+                  pelaksanaan kegiatan lintas divisi
+                </li>
+              </ul>
+              <div
+                class="mt-3 text-xs text-slate-500 font-semibold dark:text-white"
+              >
+                2022-2023
+              </div>
+            </div>
+          </div>
+
+          <!-- Organization 2 -->
+          <div
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="900"
+          >
+            <div
+              class="relative bg-white dark:bg-darkcard border dark:border-slate-700 rounded-2xl p-6 pt-10 shadow sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 transition cursor-pointer"
+            >
+              <img
+                src="img/ukmipolmed.png"
+                alt="Logo Ukmi"
+                class="absolute -top-6 left-6 w-12 h-12 rounded-full object-cover border bg-white"
+              />
+
+              <h3 class="font-semibold text-lg">
+                Unit Kegiatan Mahasiswa Islam Polmed
+              </h3>
+
+              <div
+                class="mt-1 text-sm font-bold text-slate-500 dark:text-slate-300"
+              >
+                Kepala Departemen Mentoring
+              </div>
+
+              <ul
+                class="mt-3 text-sm text-slate-600 dark:text-slate-400 list-disc list-outside pl-5 space-y-1 leading-relaxed"
+              >
+                <li>
+                  Mengelola program mentoring dan pembinaan karakter berbasis
+                  nilai Islam, serta mengoordinasikan berbagai kegiatan
+                  keagamaan kampus
+                </li>
+                <li>
+                  Aktif menjalin kolaborasi dengan organisasi internal dan
+                  eksternal untuk meningkatkan efektivitas dan dampak kegiatan
+                  dakwah kampus
+                </li>
+                <li>
+                  Mengorganisir dan menjadi bagian dari tim dalam berbagai
+                  kegiatan keagamaan kampus
+                </li>
+              </ul>
+
+              <div
+                class="mt-3 text-xs text-slate-500 font-semibold dark:text-white"
+              >
+                2023-2024
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="bg-slate-50 dark:bg-darksurface py-14">
+        <div class="max-w-6xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"
+          >
+            <div data-aos="fade-right">
+              <h2
+                class="text-4xl font-extrabold mt-2 text-slate-800 dark:text-white"
+              >
+                Project
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500"
+                  >Website & App</span
+                >
+              </h2>
+            </div>
+            <div data-aos="fade-left" class="md:max-w-xs">
+              <p
+                class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed md:text-right"
+              >
+                Pengembangan website dan aplikasi modern dengan fokus pada
+                fungsionalitas, performa, dan pengalaman pengguna.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div data-aos="fade-up" data-aos-delay="100">
+              <article
+                class="group bg-white dark:bg-darkcard rounded-2xl shadow border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-pointer"
+                onclick="
+                  openProjectModal(
+                    'Website UMKM Kebab Hajejun',
+                    'Website E-Commerce UMKM Kebab Hajejun untuk profil usaha, menu produk, informasi layanan, serta mempermudah pelanggan dalam mengenal brand dan melakukan pemesanan secara online.',
+                    'Project OJT (On Job Training)',
+                    'https://kebabhajejun.github.io/officiall/',
+                    'img/web-kebabhajejun.png',
+                  )
+                "
+              >
+                <div class="relative overflow-hidden aspect-video rounded-xl">
+                  <img
+                    src="img/web-kebabhajejun.png"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="web-kebabhajejun"
+                  />
+                  <div
+                    class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <span
+                      class="bg-white text-slate-900 px-5 py-2 rounded-full font-semibold shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm"
+                      >Project Details</span
+                    >
+                  </div>
+                </div>
+                <div class="px-2 py-4">
+                  <h3
+                    class="text-lg font-bold text-slate-800 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight"
+                  >
+                    Website UMKM Kebab Hajejun
+                  </h3>
+                  <p
+                    class="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2"
+                  >
+                    Website E-Commerce UMKM untuk profil usaha, produk dan
+                    pemesanan secara online
+                  </p>
+                  <div
+                    class="mt-4 pt-3 border-t border-slate-300 dark:border-white-100 flex items-center justify-between"
+                  >
+                    <span
+                      class="text-[11px] font-medium text-slate-500 dark:text-slate-300 italic"
+                      >Project OJT (On Job Training)
+                    </span>
+                    <span
+                      class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                      >Project Overview
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project 2 -->
+            <div data-aos="fade-up" data-aos-delay="200">
+              <article
+                class="group bg-white dark:bg-darkcard rounded-2xl shadow border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-pointer"
+                onclick="
+                  openProjectModal(
+                    'Explore Faroe Island',
+                    'Smart-Tourism : website yang dirancang dirancang untuk menyajikan informasi wisata Faroe Islands secara informatif dan visual menarik, meliputi halaman destinasi, artikel wisata, paket tur, testimoni, serta informasi kontak.',
+                    'Project Training & Course',
+                    'https://ai-tj.github.io/travel-faroeisland/',
+                    'img/web-faroeisland.png',
+                  )
+                "
+              >
+                <div class="relative overflow-hidden aspect-video rounded-xl">
+                  <img
+                    src="img/web-faroeisland.png"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="web-faroeisland"
+                  />
+                  <div
+                    class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <span
+                      class="bg-white text-slate-900 px-5 py-2 rounded-full font-semibold shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm"
+                      >Project Details</span
+                    >
+                  </div>
+                </div>
+                <div class="px-2 py-4">
+                  <h3
+                    class="text-lg font-bold text-slate-800 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight"
+                  >
+                    Explore Faroe Island
+                  </h3>
+                  <p
+                    class="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2"
+                  >
+                    Website wisata faroe island yang berisi informasi destinasi,
+                    artikel, paket tur, dan testimoni
+                  </p>
+                  <div
+                    class="mt-4 pt-3 border-t border-slate-300 dark:border-white-100 flex items-center justify-between"
+                  >
+                    <span
+                      class="text-[11px] font-medium text-slate-500 dark:text-slate-300 italic"
+                      >Project Training & Course
+                    </span>
+                    <span
+                      class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                      >Project Overview
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project 3 -->
+            <div data-aos="fade-up" data-aos-delay="300">
+              <article
+                class="group bg-white dark:bg-darkcard rounded-2xl shadow border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-pointer"
+                onclick="
+                  openProjectModal(
+                    'Trainly ID',
+                    'Website ini dirancang sebagai sistem terintegrasi yang memudahkan pengguna dalam mengakses informasi perusahaan, jadwal perjalanan, pemesanan tiket, serta layanan transportasi kereta api dalam satu platform',
+                    'Project Mata Kuliah',
+                    'https://ai-tj.github.io/TrainlyID/',
+                    'img/web-trainlyid.png',
+                  )
+                "
+              >
+                <div class="relative overflow-hidden aspect-video rounded-xl">
+                  <img
+                    src="img/web-trainlyid.png"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="web-trainlyid"
+                  />
+                  <div
+                    class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <span
+                      class="bg-white text-slate-900 px-5 py-2 rounded-full font-semibold shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm"
+                      >Project Details</span
+                    >
+                  </div>
+                </div>
+                <div class="px-2 py-4">
+                  <h3
+                    class="text-lg font-bold text-slate-800 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight"
+                  >
+                    Trainly ID
+                  </h3>
+                  <p
+                    class="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2"
+                  >
+                    Website Demo untuk profile perusahaan & pemesanan tiket
+                    kereta api secara online
+                  </p>
+                  <div
+                    class="mt-4 pt-3 border-t border-slate-300 dark:border-white-100 flex items-center justify-between"
+                  >
+                    <span
+                      class="text-[11px] font-medium text-slate-500 dark:text-slate-300 italic"
+                      >Project Mata Kuliah
+                    </span>
+                    <span
+                      class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                      >Project Overview
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="mt-10 flex justify-end" data-aos="fade-left">
+            <a
+              href="project-web.html"
+              class="group inline-flex items-center gap-3 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-r hover:from-[#00C4CC] hover:to-[#7d2ae8] hover:text-white"
+            >
+              Lihat Semua Projects
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODAL PROJECT -->
+      <div
+        id="projectModal"
+        class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50"
+        onclick="closeProjectModal()"
+      >
+        <div
+          class="bg-white dark:bg-darkcard max-w-3xl w-full mx-4 rounded-2xl p-6 relative animate-fade"
+          onclick="event.stopPropagation()"
+        >
+          <button
+            onclick="closeProjectModal()"
+            class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/50 text-white hover:bg-red-500 transition flex items-center justify-center"
+          >
+            ✕
+          </button>
+
+          <h3 id="projectTitle" class="text-xl font-bold mb-2"></h3>
+          <p
+            id="projectDesc"
+            class="text-sm text-slate-600 dark:text-slate-400 mb-2"
+          ></p>
+          <div class="text-xs text-slate-500 dark:text-white font-bold mb-3">
+            <span id="projectTech"></span>
+          </div>
+
+          <img
+            id="projectImg"
+            src=""
+            alt="Project"
+            class="w-full rounded-lg border dark:border-slate-700 mb-4"
+          />
+
+          <a
+            id="projectLink"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="relative inline-block px-6 py-2 font-medium text-white bg-black rounded-lg overflow-hidden group transform transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 dark:bg-white dark:text-black dark:hover:text-black"
+          >
+            <span
+              class="absolute inset-0 bg-green-500 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
+            ></span>
+
+            <span
+              class="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-300"
+            >
+              Visit Website
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M18 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT DESAIN -->
+      <section id="design-project" class="max-w-6xl mx-auto px-6 py-14">
+        <div class="max-w-6xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"
+          >
+            <div data-aos="fade-right">
+              <h2
+                class="text-4xl font-extrabold mt-2 text-slate-800 dark:text-white"
+              >
+                Project
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-tr from-[#405DE6] via-[#E1306C] to-[#FFDC80]"
+                >
+                  Design
+                </span>
+              </h2>
+            </div>
+            <div data-aos="fade-left" class="md:max-w-xs">
+              <p
+                class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed md:text-right"
+              >
+                Karya desain visual dan antarmuka digital yang menonjolkan
+                estetika, konsistensi, dan komunikasi yang efektif.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Desain 1 -->
+            <div data-aos="fade-up" data-aos-delay="300">
+              <article
+                class="group relative bg-white dark:bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2"
+                onclick="openDesignModal('pdf/design-book.pdf')"
+              >
+                <div class="relative overflow-hidden aspect-video">
+                  <img
+                    src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Project Thumbnail"
+                  />
+                  <div
+                    class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <span
+                      class="bg-white text-slate-900 px-4 py-1.5 rounded-full text-sm font-semibold shadow-xl"
+                    >
+                      Design Preview
+                    </span>
+                  </div>
+                </div>
+
+                <div class="p-4">
+                  <h3
+                    class="text-lg font-bold text-slate-800 dark:text-white tracking-tight"
+                  >
+                    E-Commerce Premium
+                  </h3>
+
+                  <p
+                    class="mt-1 text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed"
+                  >
+                    Pengembangan antarmuka marketplace modern dengan optimasi
+                    performa.
+                  </p>
+
+                  <div
+                    class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between"
+                  >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider border border-blue-100 dark:bg-blue-600 dark:text-white dark:border-blue-800/50"
+                    >
+                      UI Design
+                    </span>
+
+                    <span
+                      class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                    >
+                      Design Showcase
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project Desain 2 -->
+            <div data-aos="fade-up" data-aos-delay="200">
+              <article
+                class="group relative bg-white dark:bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2"
+                onclick="openDesignModal('pdf/design-book.pdf')"
+              >
+                <div class="relative overflow-hidden aspect-video">
+                  <img
+                    src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Project Thumbnail"
+                  />
+                  <div
+                    class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <span
+                      class="bg-white text-slate-900 px-4 py-1.5 rounded-full text-sm font-semibold shadow-xl"
+                    >
+                      Design Preview
+                    </span>
+                  </div>
+                </div>
+
+                <div class="p-4">
+                  <h3
+                    class="text-lg font-bold text-slate-800 dark:text-white tracking-tight"
+                  >
+                    E-Commerce Premium
+                  </h3>
+
+                  <p
+                    class="mt-1 text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed"
+                  >
+                    Pengembangan antarmuka marketplace modern dengan optimasi
+                    performa.
+                  </p>
+
+                  <div
+                    class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between"
+                  >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider border border-blue-100 dark:bg-blue-600 dark:text-white dark:border-blue-800/50"
+                    >
+                      UI Design
+                    </span>
+
+                    <span
+                      class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                    >
+                      Design Showcase
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project Desain 3 -->
+            <div data-aos="fade-up" data-aos-delay="100">
+              <article
+                class="group relative bg-white dark:bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2"
+                onclick="openDesignModal('pdf/design-book.pdf')"
+              >
+                <div class="relative overflow-hidden aspect-video">
+                  <img
+                    src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Project Thumbnail"
+                  />
+                  <div
+                    class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <span
+                      class="bg-white text-slate-900 px-4 py-1.5 rounded-full text-sm font-semibold shadow-xl"
+                    >
+                      Design Preview
+                    </span>
+                  </div>
+                </div>
+
+                <div class="p-4">
+                  <h3
+                    class="text-lg font-bold text-slate-800 dark:text-white tracking-tight"
+                  >
+                    E-Commerce Premium
+                  </h3>
+
+                  <p
+                    class="mt-1 text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed"
+                  >
+                    Pengembangan antarmuka marketplace modern dengan optimasi
+                    performa.
+                  </p>
+
+                  <div
+                    class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between"
+                  >
+                    <span
+                      class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider border border-blue-100 dark:bg-blue-600 dark:text-white dark:border-blue-800/50"
+                    >
+                      UI Design
+                    </span>
+
+                    <span
+                      class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                    >
+                      Design Showcase
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="mt-10 flex justify-end" data-aos="fade-left">
+            <a
+              href="project-design.html"
+              class="group inline-flex items-center gap-3 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7]"
+            >
+              Explore Karya Desain
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODAL DESIGN -->
+      <div
+        id="designModal"
+        class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-50"
+        onclick="closeDesignModal()"
+      >
+        <div
+          class="bg-white dark:bg-darkcard max-w-3xl w-full mx-4 rounded-2xl p-6 relative animate-fade"
+          onclick="event.stopPropagation()"
+        >
+          <button
+            onclick="closeDesignModal()"
+            class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/50 text-white hover:bg-red-500 transition flex items-center justify-center"
+          >
+            ✕
+          </button>
+
+          <h3 class="text-xl font-bold mb-1">Preview Design</h3>
+
+          <iframe
+            id="designPdf"
+            src=""
+            class="w-full h-[70vh] rounded-lg border dark:border-slate-700"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Project IOT Section -->
+      <section id="iot-projects" class="bg-slate-50 dark:bg-darksurface py-14">
+        <div class="max-w-6xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
+          >
+            <div data-aos="fade-right">
+              <h2
+                class="text-4xl font-extrabold mt-2 text-slate-800 dark:text-white"
+              >
+                Project
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500"
+                  >IoT System & Automation</span
+                >
+              </h2>
+            </div>
+            <div data-aos="fade-left" class="md:max-w-xs">
+              <p
+                class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed md:text-right"
+              >
+                Integrasi sensor, mikrokontroler, dan dashboard data untuk
+                solusi cerdas di dunia nyata.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project IoT 1 -->
+            <div data-aos="fade-up" data-aos-delay="100">
+              <article
+                class="group relative bg-white dark:bg-slate-900 overflow-hidden rounded-2xl shadow border-2 border-black dark:border-white p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+                onclick="openIoTModal('pdf/iot-smartfarming.pdf')"
+              >
+                <div
+                  class="relative overflow-hidden rounded-xl border border-emerald-500/30"
+                >
+                  <img
+                    src="img/iot-smartfarming.png"
+                    class="w-full h-44 object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="smartfarming-iot"
+                  />
+
+                  <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+                  >
+                    <span
+                      class="text-white text-sm px-4 py-2 border border-white/50 rounded-full backdrop-blur-sm"
+                    >
+                      View Work
+                    </span>
+                  </div>
+
+                  <div
+                    class="absolute bottom-2 left-2 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="flex items-center gap-1 bg-black/80 backdrop-blur-sm text-[9px] text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/50 uppercase tracking-widest font-bold"
+                    >
+                      <span
+                        class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"
+                      ></span>
+                      Active
+                    </span>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <h3
+                    class="text-xl font-bold text-slate-900 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight leading-none"
+                  >
+                    StunGuard - Smartfarming : IoT Monitoring & Control System
+                  </h3>
+
+                  <p
+                    class="mt-2 text-xs text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2 italic"
+                  >
+                    "SmartFarming - Penerapan Media Akuaponik dan Hidroponik
+                    Berbasis IoT, by Tim Lomba : StunGuard"
+                  </p>
+
+                  <div
+                    class="mt-4 pt-3 border-t-2 border-black dark:border-white flex items-center justify-between"
+                  >
+                    <div class="flex flex-col">
+                      <span
+                        class="text-[11px] font-bold text-slate-700 dark:text-slate-200"
+                      >
+                        PROJECT LOMBA
+                      </span>
+                    </div>
+
+                    <div
+                      class="flex items-center gap-1 text-black dark:text-white"
+                    >
+                      <span
+                        class="text-[10px] font-black uppercase tracking-tighter"
+                        >Discover Project</span
+                      >
+                      <div
+                        class="w-6 h-6 rounded-full border border-black dark:border-white flex items-center justify-center transition-transform duration-300 group-hover:rotate-45 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-3 w-3"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project IoT 2 -->
+            <div data-aos="fade-up" data-aos-delay="200">
+              <article
+                class="group relative bg-white dark:bg-slate-900 overflow-hidden rounded-2xl shadow border-2 border-black dark:border-white p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+                onclick="openIoTModal('pdf/iot-pumpwater.pdf')"
+              >
+                <div
+                  class="relative overflow-hidden rounded-xl border border-emerald-500/30"
+                >
+                  <img
+                    src="img/iot-pumpwater.png"
+                    class="w-full h-44 object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="IoT Pumpwater"
+                  />
+
+                  <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+                  >
+                    <span
+                      class="text-white text-sm px-4 py-2 border border-white/50 rounded-full backdrop-blur-sm"
+                    >
+                      View Work
+                    </span>
+                  </div>
+
+                  <div
+                    class="absolute bottom-2 left-2 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="flex items-center gap-1 bg-black/80 backdrop-blur-sm text-[9px] text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/50 uppercase tracking-widest font-bold"
+                    >
+                      <span
+                        class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"
+                      ></span>
+                      Active
+                    </span>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <h3
+                    class="text-xl font-bold text-slate-900 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight leading-none"
+                  >
+                    IoT-Based Pump Vibration Monitoring System
+                  </h3>
+
+                  <p
+                    class="mt-2 text-xs text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2 italic"
+                  >
+                    "Perancangan Sistem Deteksi Kerusakan Dini pada Pompa Air
+                    Berbasis IoT"
+                  </p>
+
+                  <div
+                    class="mt-4 pt-3 border-t-2 border-black dark:border-white flex items-center justify-between"
+                  >
+                    <div class="flex flex-col">
+                      <span
+                        class="text-[11px] font-bold text-slate-700 dark:text-slate-200"
+                      >
+                        PROJECT TUGAS AKHIR
+                      </span>
+                    </div>
+
+                    <div
+                      class="flex items-center gap-1 text-black dark:text-white"
+                    >
+                      <span
+                        class="text-[10px] font-black uppercase tracking-tighter"
+                        >Discover Project</span
+                      >
+                      <div
+                        class="w-6 h-6 rounded-full border border-black dark:border-white flex items-center justify-center transition-transform duration-300 group-hover:rotate-45 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-3 w-3"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project IoT 3 -->
+            <div data-aos="fade-up" data-aos-delay="300">
+              <article
+                class="group relative bg-white dark:bg-slate-900 overflow-hidden rounded-2xl shadow border-2 border-black dark:border-white p-5 transition-all duration-500 hover:-translate-y-3 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+                onclick="openIoTModal('pdf/iot-fanheat.pdf')"
+              >
+                <div
+                  class="relative overflow-hidden rounded-xl border border-emerald-500/30"
+                >
+                  <img
+                    src="img/iot-fanheat.png"
+                    class="w-full h-44 object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="IoT Thumbnail"
+                  />
+
+                  <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+                  >
+                    <span
+                      class="text-white text-sm px-4 py-2 border border-white/50 rounded-full backdrop-blur-sm"
+                    >
+                      View Work
+                    </span>
+                  </div>
+
+                  <div
+                    class="absolute bottom-2 left-2 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="flex items-center gap-1 bg-black/80 backdrop-blur-sm text-[9px] text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/50 uppercase tracking-widest font-bold"
+                    >
+                      <span
+                        class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"
+                      ></span>
+                      Active
+                    </span>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <h3
+                    class="text-xl font-bold text-slate-900 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight leading-none"
+                  >
+                    Smart Automation: Temperature Control System
+                  </h3>
+
+                  <p
+                    class="mt-2 text-xs text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2 italic"
+                  >
+                    "Smart Environment: Sistem Monitoring dan Kontrol Suhu serta
+                    Kelembaban Panel Listrik Berbasis IoT"
+                  </p>
+
+                  <div
+                    class="mt-4 pt-3 border-t-2 border-black dark:border-white flex items-center justify-between"
+                  >
+                    <div class="flex flex-col">
+                      <span
+                        class="text-[11px] font-bold text-slate-700 dark:text-slate-200"
+                      >
+                        PROJECT MAGANG
+                      </span>
+                    </div>
+
+                    <div
+                      class="flex items-center gap-1 text-black dark:text-white"
+                    >
+                      <span
+                        class="text-[10px] font-black uppercase tracking-tighter"
+                        >Discover Project</span
+                      >
+                      <div
+                        class="w-6 h-6 rounded-full border border-black dark:border-white flex items-center justify-center transition-transform duration-300 group-hover:rotate-45 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-3 w-3"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODAL IOT -->
+      <div
+        id="iotModal"
+        class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-50"
+        onclick="closeIoTModal()"
+      >
+        <div
+          class="bg-white dark:bg-darkcard max-w-3xl w-full mx-4 rounded-2xl p-6 relative animate-fade"
+          onclick="event.stopPropagation()"
+        >
+          <button
+            onclick="closeIoTModal()"
+            class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/50 text-white hover:bg-red-500 transition flex items-center justify-center"
+          >
+            ✕
+          </button>
+
+          <h3 class="text-xl font-bold mb-1">Preview Project</h3>
+
+          <iframe
+            id="iotPdf"
+            src=""
+            class="w-full h-[70vh] rounded-lg border dark:border-slate-700"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="bg-gradient-to-b from-white to-slate-50 dark:from-darkbg dark:to-darksurface py-14"
+      >
+        <div class="max-w-4xl mx-auto px-6">
+          <div
+            class="bg-white dark:bg-darkcard border dark:border-slate-700 rounded-2xl p-6 shadow"
+          >
+            <h2 class="text-2xl font-bold mb-2">Hubungi Saya</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-6">
+              Silakan hubungi saya melalui sosial media berikut:
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <!-- WhatsApp -->
+              <a
+                href="https://wa.me/6282181314702"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 p-4 rounded-xl dark:hover:bg-slate-800 border transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                  class="w-8 h-8 transition-transform duration-500 group-hover:scale-110 dark:invert"
+                  alt="WhatsApp"
+                />
+                <div>
+                  <div class="font-semibold">WhatsApp</div>
+                  <div
+                    class="text-sm text-slate-600 dark:text-slate-300 dark:font-semibold"
+                  >
+                    0821-8131-4702
+                  </div>
+                </div>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="https://instagram.com/audi_ikhsan"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 p-4 rounded-xl dark:hover:bg-slate-800 border transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
+                  class="w-8 h-8 dark:invert"
+                  alt="Instagram"
+                />
+                <div>
+                  <div class="font-semibold">Instagram</div>
+                  <div
+                    class="text-sm text-slate-600 dark:text-slate-300 dark:font-semibold"
+                  >
+                    @audi_ikhsan
+                  </div>
+                </div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/in/audiikhsan10/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 p-4 rounded-xl dark:hover:bg-slate-800 border transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+                  class="w-8 h-8 dark:invert"
+                  alt="LinkedIn"
+                />
+                <div>
+                  <div class="font-semibold">LinkedIn</div>
+                  <div
+                    class="text-sm text-slate-600 dark:text-slate-300 dark:font-semibold"
+                  >
+                    Audi Ikhsan
+                  </div>
+                </div>
+              </a>
+
+              <!-- GitHub -->
+              <a
+                href="https://github.com/ai-tj"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 p-4 rounded-xl dark:hover:bg-slate-800 border transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg"
+                  class="w-8 h-8 dark:invert"
+                  alt="GitHub"
+                />
+                <div>
+                  <div class="font-semibold">GitHub</div>
+                  <div
+                    class="text-sm text-slate-600 dark:text-slate-300 dark:font-semibold"
+                  >
+                    ai-tj
+                  </div>
+                </div>
+              </a>
+
+              <!-- Gmail-->
+              <div
+                class="group flex items-center gap-4 p-4 rounded-xl dark:hover:bg-slate-800 border transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg"
+                  class="w-8 h-8 dark:invert"
+                  alt="Gmail"
+                />
+                <div>
+                  <div class="font-semibold">Email</div>
+                  <div
+                    class="text-sm text-slate-600 dark:text-slate-300 dark:font-semibold"
+                  >
+                    audiikhsan10@gmail.com
+                  </div>
+                </div>
+              </div>
+
+              <!-- Telepon -->
+              <div
+                class="group flex items-center gap-4 p-4 rounded-xl dark:hover:bg-slate-800 border transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/phone.svg"
+                  class="w-8 h-8 dark:invert"
+                  alt="Telepon"
+                />
+                <div>
+                  <div class="font-semibold">Telepon</div>
+                  <div
+                    class="text-sm text-slate-600 dark:text-slate-300 dark:font-semibold"
+                  >
+                    +62 821-8131-4702
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white dark:bg-[#020617] transition-colors duration-500">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs tracking-widest uppercase items-center"
+        >
+          <!-- English Version -->
+          <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <a
+              href="home-eng.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View website in English"
+              class="group w-11 h-11 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+            >
+              <img
+                src="https://flagcdn.com/w80/gb.png"
+                alt="English Version"
+                class="w-8 h-8 object-cover rounded-full transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <p class="text-slate-500 dark:text-slate-400">
+              Open My Website in English
+            </p>
+          </div>
+
+          <!-- Copyright -->
+          <div class="flex items-center justify-center text-center">
+            <p class="text-slate-500 dark:text-slate-400">
+              <span class="font-bold">© audi ikhsan</span> — Built with Growth
+              ✨
+            </p>
+          </div>
+
+          <!-- CV -->
+          <div class="flex items-center gap-3 justify-center sm:justify-end">
+            <p class="text-slate-500 dark:text-slate-400">Download CV</p>
+            <a
+              href="pdf/cv-audiikhsan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open profile"
+              class="group w-11 h-11 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-black dark:text-white transition-transform duration-500 group-hover:scale-105"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 20.25a8.25 8.25 0 0115 0"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Tailwind CDN -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 900,
+        easing: "ease-out-cubic",
+        once: true,
+        offset: 120,
+      });
+    </script>
+
+    <!-- Responsive Mobile -->
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
+
+    <!-- Theme -->
+    <script>
+      const themeBtn = document.getElementById("themeBtn");
+      const themeBtnMobile = document.getElementById("themeBtnMobile");
+      const html = document.documentElement;
+
+      function toggleTheme() {
+        html.classList.toggle("dark");
+
+        const isDark = html.classList.contains("dark");
+        if (themeBtn)
+          themeBtn.textContent = isDark ? "Dark Mode" : "Light Mode";
+        if (themeBtnMobile)
+          themeBtnMobile.textContent = isDark ? "Dark Mode" : "Light Mode";
+      }
+
+      themeBtn?.addEventListener("click", toggleTheme);
+      themeBtnMobile?.addEventListener("click", toggleTheme);
+    </script>
+
+    <!-- Modal Sertifikat -->
+    <script>
+      function openCertModal(title, desc, org, year, pdf) {
+        document.getElementById("certTitle").textContent = title;
+        document.getElementById("certDesc").textContent = desc;
+        document.getElementById("certOrg").textContent = org;
+        document.getElementById("certYear").textContent = year;
+
+        document.getElementById("certPdf").src = pdf;
+
+        document.getElementById("certModal").classList.remove("hidden");
+        document.getElementById("certModal").classList.add("flex");
+      }
+
+      function closeCertModal() {
+        document.getElementById("certModal").classList.add("hidden");
+        document.getElementById("certModal").classList.remove("flex");
+        document.getElementById("certPdf").src = "";
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          const certModal = document.getElementById("certModal");
+          if (!certModal.classList.contains("hidden")) {
+            certModal.classList.add("hidden");
+            certModal.classList.remove("flex");
+          }
+        }
+      });
+    </script>
+
+    <!-- Modal Project -->
+    <script>
+      function openProjectModal(title, desc, tech, link, img) {
+        document.getElementById("projectTitle").textContent = title;
+        document.getElementById("projectDesc").textContent = desc;
+        document.getElementById("projectTech").textContent = tech;
+        document.getElementById("projectImg").src = img;
+        document.getElementById("projectLink").href = link;
+
+        document.getElementById("projectModal").classList.remove("hidden");
+        document.getElementById("projectModal").classList.add("flex");
+      }
+
+      function closeProjectModal() {
+        document.getElementById("projectModal").classList.add("hidden");
+        document.getElementById("projectModal").classList.remove("flex");
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          const projectModal = document.getElementById("projectModal");
+          if (!projectModal.classList.contains("hidden")) {
+            projectModal.classList.add("hidden");
+            projectModal.classList.remove("flex");
+          }
+        }
+      });
+    </script>
+
+    <!-- Modal Project Design -->
+    <script>
+      function openDesignModal(pdfUrl) {
+        const modal = document.getElementById("designModal");
+        const pdf = document.getElementById("designPdf");
+
+        pdf.src = pdfUrl;
+        modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeDesignModal() {
+        const modal = document.getElementById("designModal");
+        const pdf = document.getElementById("designPdf");
+
+        modal.classList.add("hidden");
+        pdf.src = "";
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeDesignModal();
+        }
+      });
+    </script>
+
+    <!-- Modal Project IoT -->
+    <script>
+      function openIoTModal(pdfUrl) {
+        const modal = document.getElementById("iotModal");
+        const pdf = document.getElementById("iotPdf");
+
+        pdf.src = pdfUrl;
+        modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeIoTModal() {
+        const modal = document.getElementById("iotModal");
+        const pdf = document.getElementById("iotPdf");
+
+        modal.classList.add("hidden");
+        pdf.src = "";
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeIoTModal();
+      });
+    </script>
+  </body>
+</html>

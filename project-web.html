@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Project Site</title>
+    <meta
+      name="description"
+      content="Daftar lengkap sertifikat profesional saya"
+    />
+    <link rel="icon" type="image/png" href="img/myicon.png" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4f46e5",
+              accent: "#06b6d4",
+              darkbg: "#0f172a",
+              darksurface: "#1e293b",
+              darkcard: "#334155",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="bg-gradient-to-b from-slate-50 to-white text-slate-800 antialiased dark:from-darkbg dark:to-darksurface dark:text-slate-100"
+  >
+    <!-- HEADER -->
+    <header
+      class="fixed w-full z-30 top-0 backdrop-blur-md bg-white/60 border-b border-slate-200 dark:bg-darksurface/60 dark:border-slate-700"
+    >
+      <div
+        class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="h-10 w-10 rounded-full overflow-hidden">
+            <img
+              src="img/audiikhsan-bw.jpeg"
+              alt="pasfoto"
+              class="h-full w-full object-cover scale-150"
+            />
+          </div>
+
+          <div class="block">
+            <div class="text-sm font-bold">Audi Ikhsan</div>
+            <div class="text-xs text-slate-600 dark:text-slate-400">
+              Web Developer • Design Enthusiast
+            </div>
+          </div>
+        </a>
+        <nav class="md:flex items-center">
+          <button
+            id="themeBtn"
+            class="ml-2 px-3 py-1 rounded-md border text-sm border-slate-300 dark:border-slate-600 bg-white text-slate-800 dark:bg-darkcard dark:text-slate-100 transition-all duration-300 ease-out transform hover:scale-110 hover:bg-darksurface hover:text-white dark:hover:bg-slate-100 dark:hover:text-black"
+          >
+            Light Mode
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-20 max-w-6xl mx-auto px-6 py-14">
+      <div
+        class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8"
+      >
+        <div data-aos="fade-right">
+          <h2
+            class="text-4xl font-extrabold mt-2 text-slate-800 dark:text-white"
+          >
+            Project
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500"
+              >Website & App</span
+            >
+          </h2>
+        </div>
+
+        <div data-aos="fade-left" class="md:max-w-xs">
+          <p
+            class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed md:text-right"
+          >
+            Pengembangan website dan aplikasi modern dengan fokus pada
+            fungsionalitas, performa, dan pengalaman pengguna.
+          </p>
+        </div>
+
+        <a
+          href="index.html"
+          class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium bg-primary text-white rounded-lg shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-indigo-700"
+        >
+          ← Kembali ke Beranda
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <article
+            class="group bg-white dark:bg-darkcard rounded-2xl shadow border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-pointer"
+            onclick="
+              openProjectModal(
+                'Website UMKM Kebab Hajejun',
+                'Website E-Commerce UMKM Kebab Hajejun untuk profil usaha, menu produk, informasi layanan, serta mempermudah pelanggan dalam mengenal brand dan melakukan pemesanan secara online.',
+                'Project OJT (On Job Training)',
+                'https://kebabhajejun.github.io/officiall/',
+                'img/web-kebabhajejun.png',
+              )
+            "
+          >
+            <div class="relative overflow-hidden aspect-video rounded-xl">
+              <img
+                src="img/web-kebabhajejun.png"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="web-kebabhajejun"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="bg-white text-slate-900 px-5 py-2 rounded-full font-semibold shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm"
+                  >Project Details</span
+                >
+              </div>
+            </div>
+            <div class="px-2 py-4">
+              <h3
+                class="text-lg font-bold text-slate-800 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight"
+              >
+                Website UMKM Kebab Hajejun
+              </h3>
+              <p
+                class="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2"
+              >
+                Website E-Commerce UMKM untuk profil usaha, produk dan pemesanan
+                secara online
+              </p>
+              <div
+                class="mt-4 pt-3 border-t border-slate-300 dark:border-white-100 flex items-center justify-between"
+              >
+                <span
+                  class="text-[11px] font-medium text-slate-500 dark:text-slate-300 italic"
+                  >Project OJT (On Job Training)
+                </span>
+                <span
+                  class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                  >Project Overview
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+       <!-- Project 2 -->
+            <div data-aos="fade-up" data-aos-delay="200">
+              <article
+                class="group bg-white dark:bg-darkcard rounded-2xl shadow border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-pointer"
+                onclick="
+                  openProjectModal(
+                    'Explore Faroe Island',
+                    'Smart-Tourism : website yang dirancang dirancang untuk menyajikan informasi wisata Faroe Islands secara informatif dan visual menarik, meliputi halaman destinasi, artikel wisata, paket tur, testimoni, serta informasi kontak.',
+                    'Project Training & Course',
+                    'https://ai-tj.github.io/travel-faroeisland/',
+                    'img/web-faroeisland.png',
+                  )
+                "
+              >
+                <div class="relative overflow-hidden aspect-video rounded-xl">
+                  <img
+                    src="img/web-faroeisland.png"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="web-faroeisland"
+                  />
+                  <div
+                    class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <span
+                      class="bg-white text-slate-900 px-5 py-2 rounded-full font-semibold shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm"
+                      >Project Details</span
+                    >
+                  </div>
+                </div>
+                <div class="px-2 py-4">
+                  <h3
+                    class="text-lg font-bold text-slate-800 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight"
+                  >
+                    Explore Faroe Island
+                  </h3>
+                  <p
+                    class="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2"
+                  >
+                    Website wisata faroe island yang berisi informasi destinasi, artikel, paket tur, dan testimoni
+                  </p>
+                  <div
+                    class="mt-4 pt-3 border-t border-slate-300 dark:border-white-100 flex items-center justify-between"
+                  >
+                    <span
+                      class="text-[11px] font-medium text-slate-500 dark:text-slate-300 italic"
+                      >Project Training & Course
+                    </span>
+                    <span
+                      class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                      >Project Overview
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+        <!-- Project 3 -->
+        <div data-aos="fade-up" data-aos-delay="300">
+          <article
+            class="group bg-white dark:bg-darkcard rounded-2xl shadow border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-pointer"
+            onclick="
+              openProjectModal(
+                'Trainly ID',
+                'Website ini dirancang sebagai sistem terintegrasi yang memudahkan pengguna dalam mengakses informasi perusahaan, jadwal perjalanan, pemesanan tiket, serta layanan transportasi kereta api dalam satu platform',
+                'Project Mata Kuliah',
+                'https://ai-tj.github.io/TrainlyID/',
+                'img/web-trainlyid.png',
+              )
+            "
+          >
+            <div class="relative overflow-hidden aspect-video rounded-xl">
+              <img
+                src="img/web-trainlyid.png"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="web-trainlyid"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="bg-white text-slate-900 px-5 py-2 rounded-full font-semibold shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm"
+                  >Project Details</span
+                >
+              </div>
+            </div>
+            <div class="px-2 py-4">
+              <h3
+                class="text-lg font-bold text-slate-800 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight"
+              >
+                Trainly ID
+              </h3>
+              <p
+                class="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2"
+              >
+                Website Demo untuk profile perusahaan & pemesanan tiket kereta api secara online
+              </p>
+              <div
+                class="mt-4 pt-3 border-t border-slate-300 dark:border-white-100 flex items-center justify-between"
+              >
+                <span
+                  class="text-[11px] font-medium text-slate-500 dark:text-slate-300 italic"
+                  >Project Mata Kuliah
+                </span>
+                <span
+                  class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                  >Project Overview
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 4 -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <article
+            class="group bg-white dark:bg-darkcard rounded-2xl shadow border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-pointer"
+            onclick="
+              openProjectModal(
+                'Edutronik.edu',
+                'Sebuah website edukasi untuk belajar dasar elektronika dengan cara yang seru dan interaktif mulai dari gerbang logika, rangkaian listrik, quiz elektronik, hingga mini Arduino!',
+                'Project Edukasi',
+                'https://ai-tj.github.io/Game-Edutronik/',
+                'img/web-edutronik.png',
+              )
+            "
+          >
+            <div class="relative overflow-hidden aspect-video rounded-xl">
+              <img
+                src="img/web-edutronik.png"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="web-edutronik"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="bg-white text-slate-900 px-5 py-2 rounded-full font-semibold shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm"
+                  >Project Details</span
+                >
+              </div>
+            </div>
+            <div class="px-2 py-4">
+              <h3
+                class="text-lg font-bold text-slate-800 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight"
+              >
+                Edutronik.Edu
+              </h3>
+              <p
+                class="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2"
+              >
+                Sebuah platform website edukasi elektronika & teknologi berbasis interaktif belajar dengan cara menyenangkan
+              </p>
+              <div
+                class="mt-4 pt-3 border-t border-slate-300 dark:border-white-100 flex items-center justify-between"
+              >
+                <span
+                  class="text-[11px] font-medium text-slate-500 dark:text-slate-300 italic"
+                  >Project Edukasi
+                </span>
+                <span
+                  class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                  >Project Overview
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 5 -->
+        <div data-aos="fade-up" data-aos-delay="200">
+          <article
+            class="group bg-white dark:bg-darkcard rounded-2xl shadow border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-pointer"
+            onclick="
+              openProjectModal(
+                'Stunguard - Smartfarming',
+                'Website Smart Farming ini merupakan project Internet of Things (IoT) dengan metode hidroponik dan akuaponik untuk menciptakan sistem pertanian modern yang efisien, otomatis, dan terkontrol melalui smartphone.',
+                'Project Lomba Proyek Sosial - Pertamina Foundation',
+                'https://ai-tj.github.io/smartfarming-stunguard/',
+                'img/web-smartfarming.png',
+              )
+            "
+          >
+            <div class="relative overflow-hidden aspect-video rounded-xl">
+              <img
+                src="img/web-smartfarming.png"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="web-smartfarming"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="bg-white text-slate-900 px-5 py-2 rounded-full font-semibold shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm"
+                  >Project Details</span
+                >
+              </div>
+            </div>
+            <div class="px-2 py-4">
+              <h3
+                class="text-lg font-bold text-slate-800 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight"
+              >
+                Stunguard - Smartfarming
+              </h3>
+              <p
+                class="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2"
+              >
+                Penerapan sistem IoT dalam sebuah website untuk monitoring pertanian melalui smartphone
+              </p>
+              <div
+                class="mt-4 pt-3 border-t border-slate-300 dark:border-white-100 flex items-center justify-between"
+              >
+                <span
+                  class="text-[11px] font-medium text-slate-500 dark:text-slate-300 italic"
+                  >Project Lomba
+                </span>
+                <span
+                  class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                  >Project Overview
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 6 -->
+        <div data-aos="fade-up" data-aos-delay="300">
+          <article
+            class="group bg-white dark:bg-darkcard rounded-2xl shadow border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-pointer"
+            onclick="
+              openProjectModal(
+                'EduWorld Xplorer',
+                'Website EduWorld Xplorer adalah sebuah platform edukasi tentang negara di dunia yang menggabungkan teknologi interaktif dengan kurikulum geografi global. Belajar sejarah, budaya, dan letak geografis menjadi petualangan yang tak terlupakan',
+                'Project Game Edukasi',
+                'https://ai-tj.github.io/eduworld-xplorer/',
+                'img/web-eduworld.png',
+              )
+            "
+          >
+            <div class="relative overflow-hidden aspect-video rounded-xl">
+              <img
+                src="img/web-eduworld.png"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="web-eduworld"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="bg-white text-slate-900 px-5 py-2 rounded-full font-semibold shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm"
+                  >Project Details</span
+                >
+              </div>
+            </div>
+            <div class="px-2 py-4">
+              <h3
+                class="text-lg font-bold text-slate-800 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight"
+              >
+                EduWorld Xplorer
+              </h3>
+              <p
+                class="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2"
+              >
+                Platform website edukasi interaktif tentang negara-negara di dunia dengan metode game
+              </p>
+              <div
+                class="mt-4 pt-3 border-t border-slate-300 dark:border-white-100 flex items-center justify-between"
+              >
+                <span
+                  class="text-[11px] font-medium text-slate-500 dark:text-slate-300 italic"
+                  >Project Lomba
+                </span>
+                <span
+                  class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                  >Project Overview
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+         <!-- Project 6 -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <article
+            class="group bg-white dark:bg-darkcard rounded-2xl shadow border border-slate-200 dark:border-slate-700 p-4 transform transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl cursor-pointer"
+            onclick="
+              openProjectModal(
+                'Wallpaper ID Card',
+                'Website Wallpaper Your Name adalah halaman interaktif untuk membuat kartu identitas digital bergaya glassmorphism dengan animasi modern. Pengguna cukup memasukkan nama dan jabatan, lalu kartu estetik akan muncul dengan latar bergerak dan partikel melayang. Cocok untuk wallpaper, ID screen, atau lockscreen yang bisa dikustomisasi langsung di browser',
+                'Project Pribadi',
+                'https://ai-tj.github.io/wallpaper-yourname/',
+                'img/web-wallpaper.png',
+              )
+            "
+          >
+            <div class="relative overflow-hidden aspect-video rounded-xl">
+              <img
+                src="img/web-wallpaper.png"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="web-wallpaper"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="bg-white text-slate-900 px-5 py-2 rounded-full font-semibold shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 text-sm"
+                  >Project Details</span
+                >
+              </div>
+            </div>
+            <div class="px-2 py-4">
+              <h3
+                class="text-lg font-bold text-slate-800 dark:text-white transition-all duration-300 group-hover:font-black tracking-tight"
+              >
+                Wallpaper ID Card
+              </h3>
+              <p
+                class="mt-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-2"
+              >
+                Website interaktif untuk membuat kartu identitas digital bergaya glassmorphism dengan animasi modern
+              </p>
+              <div
+                class="mt-4 pt-3 border-t border-slate-300 dark:border-white-100 flex items-center justify-between"
+              >
+                <span
+                  class="text-[11px] font-medium text-slate-500 dark:text-slate-300 italic"
+                  >Project Pribadi
+                </span>
+                <span
+                  class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                  >Project Overview
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+
+      </div>
+
+      <!-- MODAL PROJECT -->
+      <div
+        id="projectModal"
+        class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50"
+        onclick="closeProjectModal()"
+      >
+        <div
+          class="bg-white dark:bg-darkcard max-w-3xl w-full mx-4 rounded-2xl p-6 relative animate-fade"
+          onclick="event.stopPropagation()"
+        >
+          <button
+            onclick="closeProjectModal()"
+            class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/50 text-white hover:bg-red-500 transition flex items-center justify-center"
+          >
+            ✕
+          </button>
+          <h3 id="projectTitle" class="text-xl font-bold mb-2"></h3>
+          <p
+            id="projectDesc"
+            class="text-sm text-slate-600 dark:text-slate-400 mb-2"
+          ></p>
+          <div class="text-xs text-slate-500 dark:text-white font-bold mb-3">
+            <span id="projectTech"></span>
+          </div>
+
+          <img
+            id="projectImg"
+            src=""
+            alt="Project"
+            class="w-full rounded-lg border dark:border-slate-700 mb-4"
+          />
+
+          <a
+            id="projectLink"
+            href="#"
+            target="_blank"
+            class="relative inline-block px-6 py-2 font-medium text-white bg-black rounded-lg overflow-hidden group transform transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 dark:bg-white dark:text-black dark:hover:text-black"
+          >
+            <span
+              class="absolute inset-0 bg-green-500 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
+            ></span>
+
+            <span
+              class="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-300"
+            >
+              Visit Website
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M18 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-100 border-t border-slate-200 text-slate-600 transition-colors duration-500">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs tracking-widest uppercase items-center"
+        >
+          <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <a
+              href="home-eng.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View website in English"
+              class="group w-11 h-11 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+            >
+              <img
+                src="https://flagcdn.com/w80/gb.png"
+                alt="English Version"
+                class="w-8 h-8 object-cover rounded-full transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <p class="text-slate-500 dark:text-slate-400">
+              Open My Website in English
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center text-center">
+            <p class="text-slate-500 dark:text-slate-400">
+              <span class="font-bold">© audi ikhsan</span> — Built with Growth
+              ✨
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 justify-center sm:justify-end">
+            <p class="text-slate-500 dark:text-slate-400">Download CV</p>
+            <a
+              href="pdf/cv-audiikhsan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open profile"
+              class="group w-11 h-11 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-black dark:text-white transition-transform duration-500 group-hover:scale-105"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 20.25a8.25 8.25 0 0115 0"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 900,
+        easing: "ease-out-cubic",
+        once: true,
+        offset: 120,
+      });
+    </script>
+
+    <script>
+      const themeBtn = document.getElementById("themeBtn");
+      const themeBtnMobile = document.getElementById("themeBtnMobile");
+      const html = document.documentElement;
+
+      function toggleTheme() {
+        html.classList.toggle("dark");
+
+        const isDark = html.classList.contains("dark");
+        if (themeBtn)
+          themeBtn.textContent = isDark ? "Dark Mode" : "Light Mode";
+        if (themeBtnMobile)
+          themeBtnMobile.textContent = isDark ? "Dark Mode" : "Light Mode";
+      }
+
+      themeBtn?.addEventListener("click", toggleTheme);
+      themeBtnMobile?.addEventListener("click", toggleTheme);
+    </script>
+
+    <script>
+      function openProjectModal(title, desc, tech, link, img) {
+        document.getElementById("projectTitle").textContent = title;
+        document.getElementById("projectDesc").textContent = desc;
+        document.getElementById("projectTech").textContent = tech;
+        document.getElementById("projectImg").src = img;
+        document.getElementById("projectLink").href = link;
+
+        document.getElementById("projectModal").classList.remove("hidden");
+        document.getElementById("projectModal").classList.add("flex");
+      }
+
+      function closeProjectModal() {
+        document.getElementById("projectModal").classList.add("hidden");
+        document.getElementById("projectModal").classList.remove("flex");
+      }
+
+      // Tutup modal dengan tombol ESC
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          const projectModal = document.getElementById("projectModal");
+          if (!projectModal.classList.contains("hidden")) {
+            projectModal.classList.add("hidden");
+            projectModal.classList.remove("flex");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

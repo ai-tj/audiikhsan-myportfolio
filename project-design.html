@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Project Site</title>
+    <meta
+      name="description"
+      content="Daftar lengkap sertifikat profesional saya"
+    />
+    <link rel="icon" type="image/png" href="img/myicon.png" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4f46e5",
+              accent: "#06b6d4",
+              darkbg: "#0f172a",
+              darksurface: "#1e293b",
+              darkcard: "#334155",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="bg-gradient-to-b from-slate-50 to-white text-slate-800 antialiased dark:from-darkbg dark:to-darksurface dark:text-slate-100"
+  >
+    <!-- HEADER -->
+    <header
+      class="fixed w-full z-30 top-0 backdrop-blur-md bg-white/60 border-b border-slate-200 dark:bg-darksurface/60 dark:border-slate-700"
+    >
+      <div
+        class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <!-- Logo Gambar -->
+          <div class="h-10 w-10 rounded-full overflow-hidden">
+            <img
+              src="img/audiikhsan-bw.jpeg"
+              alt="pasfoto"
+              class="h-full w-full object-cover scale-150"
+            />
+          </div>
+
+          <!-- Nama & Profesi -->
+          <div class="block">
+            <div class="text-sm font-bold">Audi Ikhsan</div>
+            <div class="text-xs text-slate-600 dark:text-slate-400">
+              Web Developer • Design Enthusiast
+            </div>
+          </div>
+        </a>
+        <nav class="md:flex items-center">
+          <button
+            id="themeBtn"
+            class="ml-2 px-3 py-1 rounded-md border text-sm border-slate-300 dark:border-slate-600 bg-white text-slate-800 dark:bg-darkcard dark:text-slate-100 transition-all duration-300 ease-out transform hover:scale-110 hover:bg-darksurface hover:text-white dark:hover:bg-slate-100 dark:hover:text-black"
+          >
+            Light Mode
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="pt-20 max-w-6xl mx-auto px-6 py-14">
+      <div
+        class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8"
+      >
+        <!-- Judul -->
+        <div data-aos="fade-right">
+          <h2
+            class="text-4xl font-extrabold mt-2 text-slate-800 dark:text-white"
+          >
+            Project
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-tr from-[#405DE6] via-[#E1306C] to-[#FFDC80]"
+              >Design</span
+            >
+          </h2>
+        </div>
+
+        <div data-aos="fade-left" class="md:max-w-xs">
+          <p
+            class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed md:text-right"
+          >
+            Pengembangan website dan aplikasi modern dengan fokus pada
+            fungsionalitas, performa, dan pengalaman pengguna.
+          </p>
+        </div>
+
+        <!-- Tombol kembali -->
+        <a
+          href="index.html"
+          class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium bg-primary text-white rounded-lg shadow transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-indigo-700"
+        >
+          ← Kembali ke Beranda
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Desain 1 -->
+        <div data-aos="fade-up" data-aos-delay="300">
+          <article
+            class="group relative bg-white dark:bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2"
+            onclick="openDesignModal('pdf/design-book.pdf')"
+          >
+            <div class="relative overflow-hidden aspect-video">
+              <img
+                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Project Thumbnail"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="bg-white text-slate-900 px-4 py-1.5 rounded-full text-sm font-semibold shadow-xl"
+                >
+                  Design Preview
+                </span>
+              </div>
+            </div>
+
+            <div class="p-4">
+              <h3
+                class="text-lg font-bold text-slate-800 dark:text-white tracking-tight"
+              >
+                E-Commerce Premium
+              </h3>
+
+              <p
+                class="mt-1 text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed"
+              >
+                Pengembangan antarmuka marketplace modern dengan optimasi
+                performa.
+              </p>
+
+              <div
+                class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between"
+              >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider border border-blue-100 dark:bg-blue-600 dark:text-white dark:border-blue-800/50"
+                >
+                  UI Design
+                </span>
+
+                <span
+                  class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                >
+                  Design Showcase
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project Desain 2 -->
+        <div data-aos="fade-up" data-aos-delay="200">
+          <article
+            class="group relative bg-white dark:bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2"
+            onclick="openDesignModal('pdf/design-book.pdf')"
+          >
+            <div class="relative overflow-hidden aspect-video">
+              <img
+                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Project Thumbnail"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="bg-white text-slate-900 px-4 py-1.5 rounded-full text-sm font-semibold shadow-xl"
+                >
+                  Design Preview
+                </span>
+              </div>
+            </div>
+
+            <div class="p-4">
+              <h3
+                class="text-lg font-bold text-slate-800 dark:text-white tracking-tight"
+              >
+                E-Commerce Premium
+              </h3>
+
+              <p
+                class="mt-1 text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed"
+              >
+                Pengembangan antarmuka marketplace modern dengan optimasi
+                performa.
+              </p>
+
+              <div
+                class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between"
+              >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider border border-blue-100 dark:bg-blue-600 dark:text-white dark:border-blue-800/50"
+                >
+                  UI Design
+                </span>
+
+                <span
+                  class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                >
+                  Design Showcase
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project Desain 3 -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <article
+            class="group relative bg-white dark:bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2"
+            onclick="openDesignModal('pdf/design-book.pdf')"
+          >
+            <div class="relative overflow-hidden aspect-video">
+              <img
+                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Project Thumbnail"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="bg-white text-slate-900 px-4 py-1.5 rounded-full text-sm font-semibold shadow-xl"
+                >
+                  Design Preview
+                </span>
+              </div>
+            </div>
+
+            <div class="p-4">
+              <h3
+                class="text-lg font-bold text-slate-800 dark:text-white tracking-tight"
+              >
+                E-Commerce Premium
+              </h3>
+
+              <p
+                class="mt-1 text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed"
+              >
+                Pengembangan antarmuka marketplace modern dengan optimasi
+                performa.
+              </p>
+
+              <div
+                class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between"
+              >
+                <span
+                  class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider border border-blue-100 dark:bg-blue-600 dark:text-white dark:border-blue-800/50"
+                >
+                  UI Design
+                </span>
+
+                <span
+                  class="text-primary dark:text-accent text-xs font-bold flex items-center"
+                >
+                  Design Showcase
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- MODAL DESIGN -->
+      <div
+        id="designModal"
+        class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-50"
+        onclick="closeDesignModal()"
+      >
+        <div
+          class="bg-white dark:bg-darkcard max-w-3xl w-full mx-4 rounded-2xl p-6 relative animate-fade"
+          onclick="event.stopPropagation()"
+        >
+          <!-- Close Button -->
+          <button
+            onclick="closeDesignModal()"
+            class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/50 text-white hover:bg-red-500 transition flex items-center justify-center"
+          >
+            ✕
+          </button>
+
+          <!-- Info -->
+          <h3 class="text-xl font-bold mb-1">Preview Design</h3>
+
+          <!-- PDF -->
+          <iframe
+            id="designPdf"
+            src=""
+            class="w-full h-[70vh] rounded-lg border dark:border-slate-700"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-slate-100 border-t border-slate-200 text-slate-600 transition-colors duration-500"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs tracking-widest uppercase items-center"
+        >
+          <!-- English Version (Left) -->
+          <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <a
+              href="home-eng.html"
+              aria-label="View website in English"
+              class="group w-11 h-11 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+            >
+              <img
+                src="https://flagcdn.com/w80/gb.png"
+                alt="English Version"
+                class="w-8 h-8 object-cover rounded-full transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+            <p class="text-slate-500 dark:text-slate-400">
+              Open My Website in English
+            </p>
+          </div>
+
+          <!-- Center -->
+          <div class="flex items-center justify-center text-center">
+            <p class="text-slate-500 dark:text-slate-400">
+              <span class="font-bold">© audi ikhsan</span> — Built with Growth
+              ✨
+            </p>
+          </div>
+
+          <!-- CV (Right) -->
+          <div class="flex items-center gap-3 justify-center sm:justify-end">
+            <p class="text-slate-500 dark:text-slate-400">Download CV</p>
+            <a
+              href="pdf/cv-audiikhsan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open profile"
+              class="group w-11 h-11 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-black dark:text-white transition-transform duration-500 group-hover:scale-105"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 20.25a8.25 8.25 0 0115 0"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 900, // durasi animasi (ms)
+        easing: "ease-out-cubic",
+        once: true, // animasi hanya sekali
+        offset: 120, // jarak trigger scroll
+      });
+    </script>
+
+    <script>
+      const themeBtn = document.getElementById("themeBtn");
+      const themeBtnMobile = document.getElementById("themeBtnMobile");
+      const html = document.documentElement;
+
+      function toggleTheme() {
+        html.classList.toggle("dark");
+
+        const isDark = html.classList.contains("dark");
+        if (themeBtn)
+          themeBtn.textContent = isDark ? "Dark Mode" : "Light Mode";
+        if (themeBtnMobile)
+          themeBtnMobile.textContent = isDark ? "Dark Mode" : "Light Mode";
+      }
+
+      themeBtn?.addEventListener("click", toggleTheme);
+      themeBtnMobile?.addEventListener("click", toggleTheme);
+    </script>
+
+    <script>
+      function openDesignModal(pdfUrl) {
+        const modal = document.getElementById("designModal");
+        const pdf = document.getElementById("designPdf");
+
+        pdf.src = pdfUrl;
+        modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeDesignModal() {
+        const modal = document.getElementById("designModal");
+        const pdf = document.getElementById("designPdf");
+
+        modal.classList.add("hidden");
+        pdf.src = "";
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeDesignModal();
+        }
+      });
+    </script>
+  </body>
+</html>
